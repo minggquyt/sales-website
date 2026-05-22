@@ -1,0 +1,79 @@
+@import url(../../variable.css);
+
+.herosection-video:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.herosection-description {
+    gap: 20px;
+    max-width: 730px;
+}
+
+.herosection-description>h1 {
+    color: var(--acent-color);
+}
+
+.herosection-description>p {
+    display: flex;
+    margin: auto;
+    max-width: 500px;
+    color: var(--secondary-color);
+}
+
+.section-reasons-title {
+    color: var(--acent-color);
+}
+
+.section-rules {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rules-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.rules-content ul li {
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.rules-wrapper {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2)), url('/img/banner-rule.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.training-rules{
+    position: relative;
+    background-image: url('/img/banner-rule.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.training-rules::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .rules-wrapper {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/img/banner-rule.jpg') !important;
+        padding: 20px !important;
+    }
+}

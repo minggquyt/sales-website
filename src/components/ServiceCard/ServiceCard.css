@@ -1,0 +1,37 @@
+.z-index-1 {
+    z-index: 1;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+
+.lexend-400 {
+    font-weight: 400 !important;
+}
+/* 1. Trạng thái bình thường: Giới hạn dòng hoặc chiều cao */
+.card-desc-collapsible {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Số dòng bạn muốn hiển thị mặc định (ví dụ: 3 dòng) */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
+  /* Cài đặt transition để khi hover xổ ra mượt mà */
+  max-height: 4.5em; /* Tính toán: Số dòng (3) * line-height (khoảng 1.5em) */
+  transition: max-height 0.3s ease-in-out, -webkit-line-clamp 0.3s;
+}
+
+/* Tăng kích thước card khi hover */
+.service-card-wrapper:hover {
+  transform: scale(1.025); /* Phóng to nhẹ card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ để tạo cảm giác nổi */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển cảnh mượt mà */
+  cursor: pointer;
+}
+
+/* Xổ nội dung khi hover */
+.service-card-wrapper:hover .card-desc-collapsible {
+  max-height: 1000px; /* Đặt một chiều cao tối đa đủ lớn để hiển thị hết nội dung */
+  -webkit-line-clamp: initial; /* Loại bỏ giới hạn số dòng */
+}
