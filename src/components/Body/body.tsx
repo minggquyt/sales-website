@@ -44,17 +44,17 @@ export default function Body() {
                 <Row className="g-4">
                     <ReasonCard
                         imgPath={"/img/reason-icon1.png"}
-                        CardTitle={"LỘ TRÌNH TĂNG TIẾN CỤ THỂ"}
+                        cardTitle={"LỘ TRÌNH TĂNG TIẾN CỤ THỂ"}
                         cardDescription={"Ngừng lãng phí thời gian với những bài tập ngẫu nhiên. Mình cung cấp lộ trình dựa trên trình độ cá nhân."}
                     />
                     <ReasonCard
                         imgPath={"/img/reason-icon2.png"}
-                        CardTitle={"CHIẾN LƯỢC DINH DƯỠNG TỐI ƯU"}
+                        cardTitle={"CHIẾN LƯỢC DINH DƯỠNG TỐI ƯU"}
                         cardDescription={"Dinh dưỡng không phải là kiêng khem, mà là nhiên liệu cho hiệu suất. Bạn sẽ có một kế hoạch ăn uống khoa học dựa trên tình trạng và mục tiêu hiện tại của mình để tối ưu hóa việc tăng tiến."}
                     />
                     <ReasonCard
                         imgPath={"/img/reason-icon3.png"}
-                        CardTitle={"TỐI ƯU TẬP LUYỆN CHO TỪNG CÁ NHÂN"}
+                        cardTitle={"TỐI ƯU TẬP LUYỆN CHO TỪNG CÁ NHÂN"}
                         cardDescription={"Các giáo án đại trà thất bại vì cơ địa mỗi người là khác nhau. Mình thiết kế 1 kế hoạch tập luyện riêng biệt của bạn để điều chỉnh kỹ thuật từng chuyển động, đảm bảo hiệu suất tối đa và không có nỗ lực thừa."}
                     />
                 </Row>

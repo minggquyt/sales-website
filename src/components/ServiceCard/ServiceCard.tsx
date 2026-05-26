@@ -1,8 +1,16 @@
-import { Col, Button } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import CardButton from '../CardButton/CardButton';
 import './ServiceCard.css'
 
-export default function ServiceCard({cardTitle, cardDesc, cardTime, cardType, cardThumbnailPath}) {
+interface ServiceCardProps {
+    cardTitle: string,
+    cardDesc: string,
+    cardTime: string,
+    cardType: string,
+    cardThumbnailPath: string
+}
+
+export default function ServiceCard({cardTitle, cardDesc, cardTime, cardType, cardThumbnailPath}: ServiceCardProps) {
     return (
             <Col  md={6} xxl={3} className="position-relative">
                 <div className="service-card-wrapper  overflow-hidden position-relative d-flex align-items-center">

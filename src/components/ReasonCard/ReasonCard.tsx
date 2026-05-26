@@ -1,6 +1,12 @@
 import { Col } from 'react-bootstrap';
 
-export default function ReasonCard({CardTitle, cardDescription, imgPath}) {
+interface ReasonCardProps {
+    cardTitle: string;
+    cardDescription: string;
+    imgPath: string
+}
+
+export default function ReasonCard({cardTitle, cardDescription, imgPath}: ReasonCardProps) {
     return (
         <Col    lg={4}>
             <div className="reason-card p-3 h-100  bg-dark bg-opacity-50">
@@ -8,7 +14,7 @@ export default function ReasonCard({CardTitle, cardDescription, imgPath}) {
                     <div className='overflow-hidden'>
                         <img src={imgPath} className='object-fit-cover' width={"20px"} alt="" />
                     </div>
-                    <h4 className="fw-bold text-white fs-5">{CardTitle}</h4>
+                    <h4 className="fw-bold text-white fs-5">{cardTitle}</h4>
                 </div>
                 <p className="text-white opacity-75 fs-6">{cardDescription}</p>
             </div>
