@@ -3,13 +3,15 @@ import './header.css';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const myRef = useRef(null);
+    const myRef = useRef<HTMLUListElement>(null);
 
-    function handleClickMenu(e){
+    function handleClickMenu(){
         toggleMenu();
         setTimeout(() => {
-            myRef.current.classList.add("menu-move")
-            console.log("Thêm thành công !");
+            if(myRef.current != null)
+                myRef.current.classList.add("menu-move")
+            else
+                console.log("DOM không tồn tại !");
         },500);
     }
 
