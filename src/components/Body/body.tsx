@@ -14,7 +14,7 @@ export default function Body() {
                         muted
                         loop
                         playsInline
-                        poster='/img/poster.png'
+                        poster='/img/poster.jpg'
                         className="w-100 vh-100 object-fit-cover"
                     >
                         <source src='/video/herosection.mp4' type="video/mp4" />
