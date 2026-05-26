@@ -12,7 +12,7 @@ export default function Header() {
                 myRef.current.classList.add("menu-move")
             else
                 console.log("DOM không tồn tại !");
-        },500);
+        },100);
     }
 
     const toggleMenu = () => {
