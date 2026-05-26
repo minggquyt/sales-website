@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './header.css';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const myRef = useRef(null);
+
+    function handleClickMenu(e){
+        toggleMenu();
+        setTimeout(() => {
+            myRef.current.classList.add("menu-move")
+            console.log("Thêm thành công !");
+        },500);
+    }
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -12,11 +21,11 @@ export default function Header() {
         <header className="d-flex align-items-center justify-content-between p-3 position-relative">
             <h3 className='logo lexend-600 mb-0'>MQSL</h3>
 
-            <span  onClick={toggleMenu} className="d-sm-none material-symbols-outlined">
+            <span  onClick={handleClickMenu} className="d-sm-none material-symbols-outlined">
                 menu
             </span>
 
-            <ul className={`header-menu lexend-400 d-sm-flex gap-4 list-unstyled mb-0 menu ${isMenuOpen ? 'menu-active' : 'menu-inactive'}`}>
+            <ul ref={myRef} className={`header-menu lexend-400 d-sm-flex gap-4 list-unstyled mb-0 menu ${isMenuOpen ? 'menu-active' : 'menu-inactive'}`}>
                 <li className="py-2 py-sm-0">VIETNAM</li>
                 <li className="py-2 py-sm-0">INTERNATIONAL</li>
             </ul>
